@@ -83,7 +83,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-unsigned int alpha = 0xc6;
+unsigned int alpha = 0xff;
 
 static const char *colorname[] = {
 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
@@ -104,10 +104,12 @@ static const char *colorname[] = {
 	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"black",   /* 256 -> bg */
-	"white",   /* 257 -> fg */
+	"#282A36", /* 256 -> dark */
+	"#002B36", /* 257 -> solarized */
   "#001F3F", /* 258 */
-  "#85144B", /* 259 */
+  "#85144B", /* 259 maroon */
+  "#B10DC9", /* 260 purple */
+  "#930048", /* 261 */
 };
 
 
@@ -116,7 +118,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 15;
-unsigned int defaultbg = 258;
+unsigned int defaultbg = 257;
 static unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 0;
 
